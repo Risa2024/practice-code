@@ -51,9 +51,31 @@
 // ※消費税は考慮しないものとする。 
 // 回答例では、function 命令で定義する方法で、実装。
 
-const getOrange = (price, pieces ) => {
-    return price * pieces;
-};
-console.log(getOrange(100,20));
+//const getOrange = (price, pieces ) => {
+  //  return price * pieces;
+//};
+//console.log(getOrange(100,20));
+
+//コールバック関数（時間がかかる〇〇が完了したら、△△を実行する）
+//タイマー処理
+//３秒経過したら、コンソールに「Timeout!」と表示する
+
+//const message = function() {
+ //  console.log('Timeout!');
+//}
+//setTimeout(message, 3000);
+
+//名前の入力が完了したら「Hello 〇〇さん」とコンソールログに表示
+
+//function greeting(name) {
+   console.log('Hello' + name  + 'さん');
+}
+
+//function inputUserName(callback) {
+  // let name = prompt('あなたのお名前を入力してください');
+  // callback(name);
+//}
+//inputUserName(greeting);
+
 
 
