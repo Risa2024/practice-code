@@ -156,7 +156,7 @@
 
 //------------------------------------------------
 /**
- * スプレッド構文 ...　ドットを三つ書く
+ * スプレッド構文 ...　ドットを三つ書く　Reactで使う
  */
 // 配列の展開
 // const arr1 = [1, 2];
@@ -193,7 +193,7 @@
  * mapやfilterを使った配列の処理
  */
 // const nameArr = ['田中', '山田', 'じゃけぇ'];
-// for (let index = 0; index < nameArr.length; index++) {
+// for (let index = 0; index < nameArr.length; index++) {　//従来だとforが有名
 //   console.log(nameArr[index]);
 // }
 
@@ -201,12 +201,12 @@
 //   console.log(`${index + 1}番目は${nameArr[index]}です`);
 // }
 
-// const nameArr2 = nameArr.map((name) => {
+// const nameArr2 = nameArr.map((name) => {　　
 //   return name;
 // })
 // console.log(nameArr2);
 
-// nameArr.map((name) => console.log(name));
+// nameArr.map((name) => console.log(name));　　　mapメソット
 
 // nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
