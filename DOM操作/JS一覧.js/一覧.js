@@ -93,42 +93,44 @@
 //   huga: num2,
 // }）;
 
-// const func3 = (num1, num2) => ({
-//   hoge: num1,
-//   huga: num2,
-// });
-
 // console.log(func3(10, 20));
 //------------------------------------------------
+
 /**
- * 分割代入
+ * 分割代入（ES2015〜）：配列やオブジェクトに対して使っていける
  */
-// const myProfile = {
+//配列の分割代入、オブジェクトの分割代入がある
+// const myProfile = {　　　　
 //   name: "じゃけぇ",
 //   age: 31
 // };
 
-// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
 // console.log(message1);
 
+//毎回{myProfile.name}何とか...と書くのはだるいのでそんなとき分割代入を使う
+//Reactで使う！！！
 // const { name, age } = myProfile;
 // const message2 = `名前は${name}です。年齢は${age}です。`;
 // console.log(message2);
 
+//上と同じものをかく。配列の分割代入
 // const myProfile = ["じゃけぇ", 31];
 
-// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
 // console.log(message3);
 
 // const [name, age] = myProfile;
 // const message4 = `名前は${name}です。年齢は${age}です。`;
 // console.log(message4);
+//------------------------------------------------
 
 /**
- * デフォルト値（引数、分割代入）
+ * デフォルト値（引数、分割代入のとき使う）Reactで使う
  */
 // const sayHello = (name = "ゲスト") => console.log(`こんちには!${name}さん!`);
 // sayHello("じゃけぇ");
+//引数に何も書いていないとundefind と表示される。それを防ぐために、ゲストを設定（デフォルト値）
 
 // const myProfile = {
 //   age: 31
@@ -136,9 +138,9 @@
 // const { age, name = "ゲスト" } = myProfile;
 // console.log(age);
 // console.log(name);
-
+//------------------------------------------------
 /**
- * オブジェクトの省略記法
+ * オブジェクトの省略記法：Reactで使う
  */
 // const name = "じゃけぇ";
 // const age = 31;
@@ -146,14 +148,15 @@
 //   name: name,
 //   age: age
 // };
-// const myProfile = {
+// const myProfile = {　//二つ同じ名前が２つ続くと省略できる
 //   name,
 //   age
 // };
 // console.log(myProfile);
 
+//------------------------------------------------
 /**
- * スプレッド構文 ...
+ * スプレッド構文 ...　ドットを三つ書く
  */
 // 配列の展開
 // const arr1 = [1, 2];
@@ -185,6 +188,7 @@
 // arr8[0] = 100;
 // console.log(arr8);
 
+//------------------------------------------------
 /**
  * mapやfilterを使った配列の処理
  */
