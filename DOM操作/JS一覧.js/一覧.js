@@ -8,7 +8,7 @@
 // val1 = "var変数を上書き";
 // console.log(val1);
 
-// //　var変数は再宣言可能
+// //　var変数は”再宣言”可能
 // var val1 = "var変数を再宣言";
 // console.log(val1);
 
@@ -24,7 +24,7 @@
 
 // const val3 = "const変数";
 // console.log(val3);
-
+//ーーーーーーーーーーーーーーーーーーーーーーーー
 // // const変数は上書き不可
 // val3 = "const変数を上書き";
 
@@ -36,35 +36,37 @@
 //   name: "じゃけぇ",
 //   age: 31
 // };
-// val4.name = "jak";
+// val4.name = "jak"; 上書きの方法
 // val4.address = "Hiroshima";
 // console.log(val4);
 
 // // constで定義した配列はプロパティの変更が可能
 // const val5 = ["dog", "cat"];
-// val5[0] = "bird";
-// val5.push("monkey");
+// val5[0] = "bird";　ゼロオリジン→どのプログラムも０から始まる
+// val5.push("monkey");　pushというメソットを使用すれば、配列に対し追加できる。
 // console.log(val5);
-
+//コンストでの変数宣言がReactでは主要。それ以外はステート
+//------------------------------------------
 /**
- * テンプレート文字列 ``
+ * テンプレート文字列 ``文字列の中でJSを展開する場合
  */
 // const name = "じゃけぇ";
 // const age = 31;
 // 「私の名前はじゃけぇです。年齢は31歳です。」
 
-// // 従来の方法
+// // 従来の結合方法（ES2015）
 // const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
 // console.log(message1);
 
-// // テンプレート文字列を用いた方法
-// const message2 = `私の名前は${name}です。年齢は${age}です。`;
+// // テンプレート文字列を用いた方法（新しい方法）
+// const message2 = `私の名前は${name}です。年齢は${age}です。`;ドルマークと波括弧！！
 // console.log(message2);
 
+//-----------------------------------------------
 /**
- * アロー関数
+ * アロー関数(ES2015〜)
  */
-// 従来の関数
+// 従来の関数定義
 // function func1(str) {
 //   return str;
 // }
@@ -74,14 +76,22 @@
 // console.log(func1("func1です"));
 
 // アロー関数
-// const func2 = (str) => {
+// const func2 = (str) => {　引数が一つの場合は（）を省略できる
 //   return str;
-// };
+// };　　//関数の中の処理が単一式でそのまま返却する場合、returnと{}を省略できる！！
 // console.log(func2("func2です"));
 
 // const func3 = (num1, num2) => {
 //   return num1 + num2;
 // };
+
+//単一行で値を返していくだけの場合なので、このように{}とreturnを省略できる
+//const func3 = (num1, num2) => num1 + num2;
+//応用：オブジェクトを単一式で返却する（{}）!!! Reactでよく出てくる！！！
+//const func3 = (num1, num2) => （{
+//   hoge: num1,
+//   huga: num2,
+// }）;
 
 // const func3 = (num1, num2) => ({
 //   hoge: num1,
@@ -89,7 +99,7 @@
 // });
 
 // console.log(func3(10, 20));
-
+//------------------------------------------------
 /**
  * 分割代入
  */
